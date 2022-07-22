@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>CRUD Detail</title>
+
+    <style>
+      body {
+        margin-top: 30px;
+        background-color: bisque;
+      }
+    </style>
+  </head>
+  <body >
+    <div class="container">
+      <h1>Detail Mahasiswa</h1>
+
+      <div>
+        <a href="{% url 'todo:index' %}" class="btn btn-success">Kembali ke Daftar</a>
+      </div>
+
+      <br>
+
+      <div>
+        <h2>{{ task.nama }}</h2>
+        
+        <h4><span class="badge badge-warning">{{ task.status }}</span></h4>
+          <table border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <tr>&nbsp;</tr>
+              <td><h4><b>NIM</b></h4></td>
+              <td><h4>:</h4></td>
+              <td><h4>{{ task.nim }}</h4></td>
+            </tr>
+            <tr>
+              <td><h4><b>Alamat</b></h4></td>
+              <td><h4>:</h4></td>
+              <td><h4>{{ task.alamat }}</h4></td>
+            </tr>
+            <tr>
+              <td><h4><b>Jenis Kelamin</b></h4></td>
+              <td><h4>:</h4></td>
+              <td><h4>{{ task.jk }}</h4></td>
+            </tr>
+          </table>
+
+          <!-- <h4><b>NIM</b></h4>
+          <p>{{ task.nim }}</p>
+          <h4><b>Alamat</b></h4>
+          <p>{{ task.alamat }}</p>
+          <h4><b>Jenis Kelamin</b></h4>
+          <p>{{ task.jk }}</p> -->
+      </div>
+  </div>
+ 
+  </body>
+</html>
